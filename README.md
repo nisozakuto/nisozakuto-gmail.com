@@ -1,2 +1,1 @@
-# nisozakuto-gmail.com
-projecte Euler
+#projecte Euler
