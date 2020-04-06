@@ -28,7 +28,6 @@ var FibonacciSeries = function(length) {
     if (length === 1)
         return [0, 1];
     else {
-
         var s = FibonacciSeries(length - 1);
         s.push(s[s.length - 1] + s[s.length - 2]);
         return s;
@@ -36,7 +35,6 @@ var FibonacciSeries = function(length) {
 }
 console.log(FibonacciSeries(10));
 
-//var num = 20;
 function myproblem2(num) {
     var n1 = 1,
         n2 = 0,
@@ -58,4 +56,76 @@ function myproblem2(num) {
         SeriesText.textContent = FibonacciArray.toString();
     }
     return n2;
+}
+
+
+function myproblem3(largestFactor) {
+    return ("No Answer yet.");
+}
+
+function myproblem4(largestPalindrome) {
+    //Largest 3x3 must be less smaller than => 999x999 = 998001
+    for (var i = 998001; i > 997001; i--) {
+        if (i > 100000) {
+            var firstpart = i / 1000;
+            firstpart = Math.trunc(firstpart);
+            var secondpart = i % 1000;
+            console.log("firstpart: " + firstpart + ", secondpart: " + secondpart);
+            if (firstpart == secondpart) {
+                console.log(firstpart);
+                for (var i = 0; i < 100; i++) {
+
+                }
+            }
+        }
+    }
+}
+
+function myproblem5() {
+    /* console.log("Test");
+     var primeList = [2],
+         k = [],
+         count = 0;
+
+     for (var i = 2; i < 100; i++) {
+         for (var j = 2; j < primeList.length; j++) {
+             if (i % j == 0) {
+                 k[j] = 1;
+                 console.log("k[j] " + k[j]);
+             } else
+                 k[j] = 0;
+             console.log("ELSE k[j] " + k[j]);
+
+         }
+         console.log("For; " + i);
+         if (k.reduce == 0) {
+             primeList.push(i);
+             console.log(primeList);
+
+         }
+     }
+     */
+}
+
+
+function myproblem7() {
+    console.log("myproblem7");
+    var primeList = [];
+    //    primeList.length = 10001;
+    var divisible = false;
+    for (var i = 2; i <= 10001; i++) {
+        divisible = false;
+        for (var j = 0; j <= primeList.length; j++) {
+            if (i % primeList[j] == 0) {
+                divisible = true;
+                //console.log("Not prime. i= " + i);
+                break;
+            }
+        }
+        if (divisible == false)
+            primeList.push(i);
+    }
+    console.log(primeList);
+    console.log(primeList[primeList.length - 1]);
+    return primeList[primeList.length - 1];
 }
