@@ -59,9 +59,28 @@ function myproblem2(num) {
 }
 
 
-function myproblem3(largestFactor) {
-    return ("No Answer yet.");
+function myproblem3(number) {
+    //    return ("No Answer yet.");
+    var originalNumber = number;
+    var divisor = 2;
+    while (number > 1) {
+        if (number % divisor == 0) {
+            number = number / divisor;
+        } else
+            divisor++;
+        console.log("number: " + number + " - divisor: " + divisor);
+    }
+    document.getElementById("Problem3").innerText = (originalNumber / divisor) + ", " + divisor;
+    return console.log((originalNumber / divisor) + ", " + divisor);
 }
+
+function Premyproblem3() {
+    var originalNumber1 = document.getElementById("numberToBreak").value;
+    console.log(originalNumber1);
+    myproblem3(originalNumber1);
+    return originalNumber1;
+}
+
 
 function myproblem4(largestPalindrome) {
     //Largest 3x3 must be less smaller than => 999x999 = 998001
@@ -86,7 +105,6 @@ function myproblem5() {
      var primeList = [2],
          k = [],
          count = 0;
-
      for (var i = 2; i < 100; i++) {
          for (var j = 2; j < primeList.length; j++) {
              if (i % j == 0) {
@@ -101,15 +119,13 @@ function myproblem5() {
          if (k.reduce == 0) {
              primeList.push(i);
              console.log(primeList);
-
          }
      }
      */
 }
 
-
 function myproblem7() {
-    console.log("myproblem7");
+    //console.log("myproblem7");
     var primeList = [];
     //    primeList.length = 10001;
     var divisible = false;
@@ -128,4 +144,22 @@ function myproblem7() {
     console.log(primeList);
     console.log(primeList[primeList.length - 1]);
     return primeList[primeList.length - 1];
+}
+
+function Selfpowers() {
+    var temp = 0,
+        calc = 0;
+
+    for (var i = 1; i <= 1000; i++) {
+        temp = 0;
+        temp = (i * i);
+        while (true) {
+            temp = temp % 10;
+            console.log("i: " + i + " temp:" + temp);
+            calc = calc + temp;
+            console.log("temp: " + temp + " -- calc: " + calc);
+            break;
+        }
+
+    }
 }
