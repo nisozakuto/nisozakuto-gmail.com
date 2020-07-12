@@ -23,7 +23,7 @@ function myproblem1() {
     return totalcount;
 }
 
-var FibonacciSeries = function(length) {
+var FibonacciSeries = function (length) {
 
     if (length === 1)
         return [0, 1];
@@ -33,7 +33,7 @@ var FibonacciSeries = function(length) {
         return s;
     }
 }
-console.log(FibonacciSeries(10));
+//console.log(FibonacciSeries(10));
 
 function myproblem2(num) {
     var n1 = 1,
@@ -47,7 +47,9 @@ function myproblem2(num) {
 
     while (num >= 1 && n2 < 4000000) {
         console.log("num: " + num + ", n2: " + n2);
-        if (n2 > 0) { FibonacciArray.push(n2); }
+        if (n2 > 0) {
+            FibonacciArray.push(n2);
+        }
 
         temp = n1;
         n1 = n1 + n2;
@@ -124,7 +126,7 @@ function myproblem5() {
      */
 }
 
-function myproblem7() {
+function tenThousanFirstPrime() {
     //console.log("myproblem7");
     var primeList = [];
     //    primeList.length = 10001;
@@ -145,6 +147,7 @@ function myproblem7() {
     console.log(primeList[primeList.length - 1]);
     return primeList[primeList.length - 1];
 }
+tenThousanFirstPrime();
 
 function Selfpowers() {
     var temp = 0,
